@@ -107,8 +107,8 @@ if move == True:
     p1_pick = input(p1+' choose X or O : ').upper()# player's choice of X or O
     if(p1_pick == 'X'):
         p2_pick='O'
-    elif(p2_pick == 'O'):
-        p1_pick = 'X'
+    elif(p1_pick == 'O'):
+        p2_pick = 'X'
     else:
         pass
     def compgen(): # for singleplayer mode, uses the computer's random method to generate boxes (might be bugged)
