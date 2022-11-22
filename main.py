@@ -97,13 +97,12 @@ if move == True:
     no_wins = True
     p1_pick, p2_pick = "",""
     x = 0
-    if (p1 == "" or p2 == ""):
-        if (p1 == ""):
-            p1 = "Player 1"
-        elif (p2 == ""):
-            p2 = "Player 2"
-        else:
-            pass
+    if (p1 == ""):
+        p1 = "Player 1"
+    elif (p2 == ""):
+        p2 = "Player 2"
+    else:
+        pass
     p1_pick = input(p1+' choose X or O : ').upper()# player's choice of X or O
     if(p1_pick == 'X'):
         p2_pick='O'
@@ -147,18 +146,23 @@ if move == True:
             status_main = False
             no_wins = False
             if(p1_pick == 'X'):
+                print("""     |     |      \n   {} |  {}  |  {}  \n_____|_____|_____ \n     |     |      \n   {} |  {}  |  {}  \n_____|_____|_____ \n     |     |      \n   {} |  {}  |  {}  \n     |     |      """.format(square_values[0], square_values[1], square_values[2],square_values[3], square_values[4], square_values[5], square_values[6],square_values[7],square_values[8]))
                 print(p1," Won")
             else:
                 if mode == '1' or mode ==1:
-                     print(p2," Won")
+                    print("""     |     |      \n   {} |  {}  |  {}  \n_____|_____|_____ \n     |     |      \n   {} |  {}  |  {}  \n_____|_____|_____ \n     |     |      \n   {} |  {}  |  {}  \n     |     |      """.format(square_values[0], square_values[1], square_values[2],square_values[3], square_values[4], square_values[5], square_values[6],square_values[7],square_values[8]))
+                    print(p2," Won")
                 elif mode == '2' or mode ==2:
+                    print("""     |     |      \n   {} |  {}  |  {}  \n_____|_____|_____ \n     |     |      \n   {} |  {}  |  {}  \n_____|_____|_____ \n     |     |      \n   {} |  {}  |  {}  \n     |     |      """.format(square_values[0], square_values[1], square_values[2],square_values[3], square_values[4], square_values[5], square_values[6],square_values[7],square_values[8]))
                     print('Computer won and you lost. BIG L for ',p1)  #lol
         elif(square_values[value1]=='O' and square_values[value2]=='O' and square_values[value3] == 'O'):
             status_main = False
             no_wins = False
             if(p1_pick == 'O'):
+                print("""     |     |      \n   {} |  {}  |  {}  \n_____|_____|_____ \n     |     |      \n   {} |  {}  |  {}  \n_____|_____|_____ \n     |     |      \n   {} |  {}  |  {}  \n     |     |      """.format(square_values[0], square_values[1], square_values[2],square_values[3], square_values[4], square_values[5], square_values[6],square_values[7],square_values[8]))
                 print(p1+" Won")
             else:
+                print("""     |     |      \n   {} |  {}  |  {}  \n_____|_____|_____ \n     |     |      \n   {} |  {}  |  {}  \n_____|_____|_____ \n     |     |      \n   {} |  {}  |  {}  \n     |     |      """.format(square_values[0], square_values[1], square_values[2],square_values[3], square_values[4], square_values[5], square_values[6],square_values[7],square_values[8]))
                 print(p2+" Won")
         else:
             pass
